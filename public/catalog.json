@@ -20,6 +20,41 @@
         },
         {
             "rel": "child",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/",
+            "title": "Microsoft Planetary Computer"
+        },
+        {
+            "rel": "child",
+            "href": "https://reference.geoconnex.us/",
+            "title": "Geoconnex Reference Service"
+        },
+        {
+            "rel": "child",
+            "href": "https://data.inpe.br/bdc/stac/v1/",
+            "title": "INPE STAC Server"
+        },
+        {
+            "rel": "child",
+            "href": "https://stac.asf.alaska.edu/",
+            "title": "Alaska STAC Catalog"
+        },
+        {
+            "rel": "child",
+            "href": "https://s3.eu-central-1.wasabisys.com/stac/openlandmap/catalog.json",
+            "title": "OpenLandMap STAC"
+        },
+        {
+            "rel": "child",
+            "href": "https://fedeo.ceos.org",
+            "title": "FedEO Clearinghouse"
+        },
+        {
+            "rel": "child",
+            "href": "https://s3.eu-central-1.wasabisys.com/stac/odse/catalog.json",
+            "title": "Open Environmental Data Cube Europe"
+        },
+        {
+            "rel": "child",
             "href": "https://pgc-opendata-dems.s3.us-west-2.amazonaws.com/earthdem.json",
             "title": "EarthDEM"
         },
@@ -96,7 +131,7 @@
         },
         {
             "rel": "child",
-            "href": "https://landsatlook.usgs.gov/stac-server",
+            "href": "https://landsatlook.usgs.gov/stac-server/",
             "title": "USGS Landsat"
         }
     ]
