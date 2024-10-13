@@ -129,6 +129,11 @@
             "href": "https://asc-stacbrowser.s3.us-west-2.amazonaws.com/catalog.json",
             "title": "USGS Astrogeology Provided Analysis Ready Data"
         },
+	{
+            "rel": "child",
+            "href": "https://stac.maap-project.org/",
+            "title": "MAAP STAC API (dev)"
+        },
         {
             "rel": "child",
             "href": "https://landsatlook.usgs.gov/stac-server/",
