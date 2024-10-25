@@ -57,5 +57,15 @@ module.exports = {
     requestHeaders: {},
     requestQueryParameters: {},
     preprocessSTAC: null,
-    authConfig: null
+    authConfig: null,
+    preprocessSTAC: (stac, state) => {
+        if (stac.getBrowserPath() === '/external/stac.asf.alaska.edu/') {
+            stac.title = 'Alaska Satellite Facility'
+            stac.description = 'The Alaska Satellite Facility is part of the Geophysical Institute of the University of Alaska Fairbanks, located on the Troth Yeddha’ campus.';
+        } else if (stac.getBrowserPath() === '/external/landsatlook.usgs.gov/stac-server/') {
+            stac.title = 'USGS Landsat Collection 2 data'
+            stac.description = 'LandsatLook is a tool that allows rapid online viewing and access to the USGS Landsat Collection 2 data. LandsatLook leverages resources available via a commercial cloud environment including Cloud Optimized GeoTIFF (COG) and Spatio Temporal Asset Catalog (STAC) metadata.';
+        }
+        return stac;
+    }
 };
