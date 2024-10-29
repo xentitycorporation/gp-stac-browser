@@ -26,7 +26,9 @@
   
     <link rel="icon" type="image/x-icon" href="https://sit.geoplatform.info/assets/images/web-icons/favicon.ico" />
     <title>GeoPlatform STAC</title>
+
     <style>
+      /* Ensure the rendered container is mobile-friendly */
       #rendered {
         position: relative;
         flex-direction: column;
@@ -35,6 +37,54 @@
         display: flex;
         align-self: center;
         width: 100%;
+      }
+
+      /* Adjust the navbar and ensure spacing for mobile */
+      .navbar-brand img {
+        /* max-width: 150px; */
+        padding: 1px;
+        margin-right: 3px;
+        margin-bottom: 3px;      }
+
+      .navbar-nav {
+        text-align: center;
+      }
+
+      /* Adjust the hero section to ensure visibility and avoid overlapping */
+      .hero-content-container {
+        text-align: center;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      /* Add spacing for mobile to prevent the GeoPlatform.gov logo from overlapping */
+      .hero-container {
+        padding-top: 20px;
+      }
+
+      /* Ensure that the header doesn't overlap */
+      .hero-title {
+        margin-top: 20px; /* Extra spacing to prevent overlap with top */
+      }
+
+      /* For mobile screens */
+      @media (max-width: 768px) {
+        .navbar-nav {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .navbar-collapse {
+          width: 100%; 
+        }
+
+        .hero-container {
+          padding-top: 100px; /* Extra padding for mobile to avoid overlap */
+        }
+
+        .hero-title {
+          margin-top: 50px; /* Add margin to push the header lower */
+        }
       }
     </style>
   </head>
@@ -53,7 +103,6 @@
             </button>
           </div>
           <div class="navbar-collapse collapse" id="navbarCollapse" style="height: 0px">
-            <links>
               <ul id="primary-nav" class="navbar-nav ml-auto">
                 <li class="nav-item">
                   <a class="nav-link" href="https://sit.geoplatform.info/search">Search</a>
@@ -80,7 +129,6 @@
                   <a class="nav-link" href="https://sit-kb.geoplatform.info">Support</a>
                 </li>
               </ul>
-            </links>
           </div>
         </nav>
         <div class="hero-push"></div>
@@ -123,5 +171,9 @@
         </div>
       </footer>
     </div>
+
+    <!-- Bootstrap JS, required for navbar toggling -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1Oha60nyrGyWWqxBiQzzLM5VSMEdZEPUs9rjv53A6AvYrF0GMCCPngRIoJ5jzUg" crossorigin="anonymous"></script>
   </body>
 </html>
