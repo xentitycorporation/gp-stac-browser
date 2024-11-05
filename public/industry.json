@@ -1,0 +1,22 @@
+{
+    "id": "industry-stac",
+    "stac_version": "1.0.0",
+    "title": " Industry",
+    "description": "This Collection is a virtual catalog of resources provided by Commerical companies in the United States.",
+    "type": "Catalog",
+    "links": [
+        {
+            "rel": "self",
+            "href": "./industry.json"
+        },
+        {
+            "rel": "root",
+            "href": "./industry.json"
+        },
+        {
+            "rel": "child",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/",
+            "title": "Microsoft Planetary Computer"
+        }
+    ]
+}

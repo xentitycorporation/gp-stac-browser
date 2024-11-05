@@ -47,6 +47,8 @@ module.exports = {
     cardViewMode: "cards",
     cardViewSort: "asc",
     showThumbnailsAsAssets: false,
+    showKeywordsInItemCards: true,
+    showKeywordsInCatalogCards: true,
     stacLint: true,
     geoTiffResolution: 128,
     redirectLegacyUrls: false,

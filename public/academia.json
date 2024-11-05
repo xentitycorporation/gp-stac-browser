@@ -1,0 +1,42 @@
+{
+    "id": "academia-stac",
+    "stac_version": "1.0.0",
+    "title": " Academia",
+    "description": "This Collection is a virtual catalog of resources provided by Academic Institutions in the United States.",
+    "type": "Catalog",
+    "links": [
+        {
+            "rel": "self",
+            "href": "./academia.json"
+        },
+        {
+            "rel": "root",
+            "href": "./academia.json"
+        },
+        {
+            "rel": "child",
+            "href": "https://pgc-opendata-dems.s3.us-west-2.amazonaws.com/arcticdem.json",
+            "title": "ArcticDEM"
+        },
+        {
+            "rel": "child",
+            "href": "https://planetarycomputer.microsoft.com/api/stac/v1/",
+            "title": "Microsoft Planetary Computer"
+        },
+        {
+            "rel": "child",
+            "href": "https://reference.geoconnex.us/",
+            "title": "Geoconnex Reference Service"
+        },
+        {
+            "rel": "child",
+            "href": "https://data.inpe.br/bdc/stac/v1/",
+            "title": "INPE STAC Server"
+        },
+        {
+            "rel": "child",
+            "href": "https://stac.asf.alaska.edu/",
+            "title": "Alaska STAC Catalog"
+        }
+    ]
+}

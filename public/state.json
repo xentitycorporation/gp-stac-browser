@@ -1,0 +1,42 @@
+{
+    "id": "state-stac",
+    "stac_version": "1.0.0",
+    "title": " State",
+    "description": "This Collection is a virtual catalog of resources provided by State Institutions in the United States.",
+    "type": "Catalog",
+    "links": [
+        {
+            "rel": "self",
+            "href": "./state.json"
+        },
+        {
+            "rel": "root",
+            "href": "./state.json"
+        },
+        {
+            "rel": "child",
+            "href": "https://stac.asf.alaska.edu/",
+            "title": "Alaska STAC Catalog"
+        },
+        {
+            "rel": "child",
+            "href": "https://pgc-opendata-dems.s3.us-west-2.amazonaws.com/earthdem.json",
+            "title": "EarthDEM"
+        },
+        {
+            "rel": "child",
+            "href": "https://portal.opentopography.org/stac/catalog.json",
+            "title": "OpenTopography"
+        },
+         {
+            "rel": "child",
+            "href": "https://pgc-opendata-dems.s3.us-west-2.amazonaws.com/arcticdem.json",
+            "title": "ArcticDEM"
+        },
+        {
+            "rel": "child",
+            "href": "https://raw.githubusercontent.com/scottyhq/sentinel1-rtc-stac/main/collection.json",
+            "title": "Sentinel-1 Analysis Ready Backscatter Imagery"
+        }
+    ]
+}
