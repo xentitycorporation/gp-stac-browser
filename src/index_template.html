@@ -67,27 +67,26 @@
         margin-top: 20px; /* Extra spacing to prevent overlap with top */
       }
 
+      .navbar-collapse.show {
+        #primary-nav{
+          background-color: white; /* Background color */
+          align-items: normal;
+          display: block;
+          padding: 10px;
+          color: black;
+          font-weight: bold;
+          position: fixed;
+          top: 0;
+          right: 0;
+          height: 75%;
+        }
+}
       /* For mobile screens */
       @media (max-width: 768px) {
         .navbar-nav {
           display: flex;
           flex-direction: column;
         }
-
-        /* .navbar-collapse {
-          width: 100%; 
-        } */
-
-        .navbar-brand {
-        /* max-width: 150px; */
-        padding: 1px;
-        margin-bottom: 20px;
-        }
-
-        .hero-title {
-        margin-top: 20px;
-        margin-left: 25px; /* Extra spacing to prevent overlap with top */
-      }
 
         .hero-container {
           padding-top: 0px;
@@ -190,7 +189,6 @@
     </div>
 
     <!-- Bootstrap JS, required for navbar toggling -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-u1Oha60nyrGyWWqxBiQzzLM5VSMEdZEPUs9rjv53A6AvYrF0GMCCPngRIoJ5jzUg" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   </body>
 </html>
