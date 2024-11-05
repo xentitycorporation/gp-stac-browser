@@ -1,67 +1,22 @@
 {
-    "id": "geoplatform-stac",
+    "id": "global2-stac",
     "stac_version": "1.0.0",
-    "title": " ",
-    "description": "GeoPlatform.gov provides official list of National STAC Sources.",
+    "title": " Global2",
+    "description": "This collection includes catalogs shared by Global2",
     "type": "Catalog",
     "links": [
         {
             "rel": "self",
-            "href": "./catalog.json"
+            "href": "./global2.json"
         },
         {
             "rel": "root",
-            "href": "./catalog.json"
+            "href": "./global2.json"
         },
         {
             "rel": "child",
             "href": "https://pgc-opendata-dems.s3.us-west-2.amazonaws.com/arcticdem.json",
             "title": "ArcticDEM"
-        },
-        {
-            "rel": "child",
-            "href": "./academia.json",
-            "title": "Academia Collection"
-        },
-        {
-            "rel": "child",
-            "href": "./federal.json",
-            "title": "Federal Collection"
-        },
-        {
-            "rel": "child",
-            "href": "./global-catalog.json",
-            "title": "Global Collection"
-        },
-        {
-            "rel": "child",
-            "href": "./state.json",
-            "title": "State Collection"
-        },
-        {
-            "rel": "child",
-            "href": "./industry.json",
-            "title": "Industry Collection"
-        },
-        {
-            "rel": "child",
-            "href": "./non-profit.json",
-            "title": "Nonprofit Collection"
-        },        
-        {
-            "rel": "child",
-            "href": "./tribal.json",
-            "title": "Tribal Collection"
-        },
-        {
-            "rel": "child",
-            "href": "./ngda.json",
-            "title": "NGDA Collection"
-        },
-        {
-            "rel": "child",
-            "href": "./inland-waters.json",
-            "title": "Inland Waters Collection"
         },
         {
             "rel": "child",
@@ -171,18 +126,13 @@
         },
         {
             "rel": "child",
-            "href": "https:/stac.astrogeology.usgs.gov/catalog.json",
+            "href": "https://asc-stacbrowser.s3.us-west-2.amazonaws.com/catalog.json",
             "title": "USGS Astrogeology Provided Analysis Ready Data"
         },
 	{
             "rel": "child",
             "href": "https://stac.maap-project.org/",
             "title": "MAAP STAC API (dev)"
-        },
-	{
-            "rel": "child",
-            "href": "https:/noaa-nos-coastal-lidar-pds.s3.amazonaws.com/entwine/stac/catalog.json",
-            "title": "Lidar Datasets at NOAA Digital Coast"
         },
         {
             "rel": "child",

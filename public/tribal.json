@@ -1,0 +1,17 @@
+{
+    "id": "tribal-stac",
+    "stac_version": "1.0.0",
+    "title": " Tribal",
+    "description": "This Collection is a virtual catalog of tribal resources provided by institutions in the United States.",
+    "type": "Catalog",
+    "links": [
+        {
+            "rel": "self",
+            "href": "./tribal.json"
+        },
+        {
+            "rel": "root",
+            "href": "./tribal.json"
+        }
+    ]
+}

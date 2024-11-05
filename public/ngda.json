@@ -1,0 +1,17 @@
+{
+    "id": "ngda-stac",
+    "stac_version": "1.0.0",
+    "title": " National Geospatial Data Asset",
+    "description": "This Collection is a virtual catalog of National Geospatial Data Assets (NGDA) provided by United States federal agencies.",
+    "type": "Catalog",
+    "links": [
+        {
+            "rel": "self",
+            "href": "./ngda.json"
+        },
+        {
+            "rel": "root",
+            "href": "./ngda.json"
+        }
+    ]
+}
