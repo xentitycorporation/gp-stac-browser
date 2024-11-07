@@ -55,6 +55,11 @@
         },
         {
             "rel": "child",
+            "href": "./wildfires.json",
+            "title": "Wildfires Collection"
+        },
+        {
+            "rel": "child",
             "href": "./ngda.json",
             "title": "NGDA Collection"
         },

@@ -1,0 +1,27 @@
+{
+    "id": "global-stac",
+    "stac_version": "1.0.0",
+    "title": " Global",
+    "description": "This Collection is a virtual catalog of global resources provided.",
+    "type": "Catalog",
+    "links": [
+        {
+            "rel": "self",
+            "href": "./global-catalog.json"
+        },
+        {
+            "rel": "root",
+            "href": "./global-catalog.json"
+        },
+        {
+            "rel": "child",
+            "href": "https://data.inpe.br/bdc/stac/v1/",
+            "title": "INPE STAC Server"
+        },
+        {
+            "rel": "child",
+            "href": "https://s3.eu-central-1.wasabisys.com/stac/odse/catalog.json",
+            "title": "Open Environmental Data Cube Europe"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "id": "wildfires-stac",
+    "stac_version": "1.0.0",
+    "title": " Wildfires",
+    "description": "This Collection is a virtual catalog of wildfire resources provided by institutions in the United States.",
+    "type": "Catalog",
+    "links": [
+        {
+            "rel": "self",
+            "href": "./wildfires.json"
+        },
+        {
+            "rel": "root",
+            "href": "./wildfires.json"
+        },
+        {
+            "rel": "child",
+            "href": "https:/storage.googleapis.com/cfo-public/vegetation/collection.json",
+            "title": "CFO forest structure and fuels data"
+        },
+        {
+            "rel": "child",
+            "href": "https://storage.googleapis.com/cfo-public/wildfire/collection.json",
+            "title": "Wildfire likelihood, intensity, and severity metrics"
+        },
+        {
+            "rel": "child",
+            "href": "https://cmr.earthdata.nasa.gov/stac/FEDEO/collections/urn:eop:VITO:TERRASCOPE_S2_NDVI_V2_V2",
+            "title": "SENTINEL-2 Normalized Difference Vegetation Index (NDVI) (tiles) - V2"
+        }
+    ]
+}
