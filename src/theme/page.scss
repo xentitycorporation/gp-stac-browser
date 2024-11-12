@@ -280,9 +280,28 @@ body {
 }
 
 #root .navbar .navbar-collapse links .nav-link {
-    color: #efefef !important;
+    color: #efefef;
     transition: all 0.15s ease;
     text-decoration: none;
+}
+
+/* Override color for collapsed (mobile) navbar */
+#root .navbar-collapse.show links .nav-link {
+    color: black !important;
+    font-size: small;
+    padding-left: 3px;
+}
+
+#root .navbar-collapse.show links .nav-link:hover {
+    border-left: 3px solid #2079c5;
+    border-bottom: none !important;
+    background-color: #00000012;
+}
+
+@media (min-width: 992px) {
+    #root .navbar .navbar-collapse links .nav-link {
+        color: #efefef !important; /* White font color for full-page navigation */
+    }
 }
 
 #root .navbar .navbar-collapse links .nav-link:hover {

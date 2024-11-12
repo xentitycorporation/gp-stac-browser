@@ -50,7 +50,6 @@
     <title>GeoPlatform STAC</title>
 
     <style>
-      /* Ensure the rendered container is mobile-friendly */
       #rendered {
         position: relative;
         flex-direction: column;
@@ -61,9 +60,7 @@
         width: 100%;
       }
 
-      /* Adjust the navbar and ensure spacing for mobile */
       .navbar-brand {
-        /* max-width: 150px; */
         padding: 1px;
         margin-right: 3px;
         margin-bottom: 15px;      }
@@ -72,56 +69,68 @@
         text-align: left;
       }
 
-      /* Adjust the hero section to ensure visibility and avoid overlapping */
       .hero-content-container {
         text-align: left;
         margin: 0 auto;
         padding: 0px;
       }
 
-      /* Add spacing for mobile to prevent the GeoPlatform.gov logo from overlapping */
       .hero-container {
         padding-top: 0px;
       }
 
-      /* Ensure that the header doesn't overlap */
       .hero-title {
-        margin-top: 20px; /* Extra spacing to prevent overlap with top */
+        margin-top: 20px;
+      }
+      /* Prevent flicker by hiding collapsing state */
+      .navbar-collapse.collapsing {
+        display: none !important;
       }
 
       .navbar-collapse.show {
+        transition: right 0.3s ease-in-out;
         #primary-nav{
-          background-color: white; /* Background color */
+          background-color: white;
           align-items: normal;
           display: block;
-          padding: 10px;
-          color: black;
           font-weight: bold;
           position: fixed;
           top: 0;
           right: 0;
-          height: 75%;
-          .nav-link{
-            color: black;
-          }
+          height: 100%;
+          width: 30%;
         }
+      }
+
+      .nav-item {
+        color: black !important;
       }
 
       .navbar-close-btn-wrapper {
         padding: 10px;
-        background-color: white; /* Ensures the close button has the same background color */
+        justify-content: center; 
+        background-color: white;
         position: sticky;
         top: 0;
-        z-index: 1050; /* Ensures it appears above the content */
+        z-index: 1050;
+      }
+
+      .btn-close {
+        background-color: #00000057;
+        color: black; 
+        border: none; 
+        padding-top: .75rem;
+        padding-bottom: .75rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
       }
 
       @media (min-width: 992px) {
         .navbar-close-btn-wrapper {
-          display: none !important;  /* Ensure it's hidden on large screens */
+          display: none !important;
         }
   }
 
-      /* For mobile screens */
       @media (max-width: 768px) {
         .navbar-nav {
           display: flex;
@@ -133,13 +142,12 @@
         }
 
         .hero-title {
-          margin-top: 20px; /* Add margin to push the header lower */
+          margin-top: 20px;
         }
 
         .hero-subtitle {
         display: none;
         }
-
       }
     </style>
   </head>
@@ -157,12 +165,12 @@
               <span class="navbar-toggler-icon"></span>
             </button>
           </div>
-          <div class="navbar-collapse collapse" id="navbarCollapse" style="height: 0px">
+          <div class="navbar-collapse collapse d-none" id="navbarCollapse" style="height: 0px">
             <links>
-              <ul id="primary-nav" class="navbar-nav ml-auto">
-                <li class="navbar-close-btn-wrapper d-flex justify-content-end d-lg-none">
-                  <button type="button" class="btn-close text-reset" aria-label="Close" id="navbarCloseBtn" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"></button>
-                </li>
+            <ul id="primary-nav" class="navbar-nav ml-auto">
+              <li class="navbar-close-btn-wrapper d-flex d-lg-none">
+                <button type="button" class="btn-close text-reset" aria-label="Close" id="navbarCloseBtn" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"></button>
+              </li>
                 
                 <li class="nav-item">
                   <a class="nav-link" href="https://sit.geoplatform.info/search">Search</a>
@@ -232,25 +240,37 @@
         </div>
       </footer>
     </div>
-<script>
-const navbarCloseBtn = document.getElementById('navbarCloseBtn');
-const navbarCollapse = document.getElementById('navbarCollapse');
-
-// Ensure the collapse instance is properly initialized
-const collapseInstance = new bootstrap.Collapse(navbarCollapse, {
-  toggle: false,
-});
-
-// Function to close the navbar
-function closeNavbar() {
-  if (navbarCollapse.classList.contains('show')) {
-    collapseInstance.hide();
-  }
-}
-
-// Add event listener for the close button
-navbarCloseBtn.addEventListener('click', closeNavbar);
-</script>
+    <script>
+      // Get references to the navbar-collapse and the close button
+      const navbarCollapse = document.getElementById('navbarCollapse');
+      const navbarCloseBtn = document.getElementById('navbarCloseBtn');
+      
+      // Bootstrap Collapse instance
+      const collapseInstance = new bootstrap.Collapse(navbarCollapse, {
+        toggle: false, // Don't toggle the collapse on initialization
+      });
+      
+      // When the collapse starts, hide the navbar to prevent flicker
+      navbarCollapse.addEventListener('show.bs.collapse', function () {
+        // Remove the collapsing class if it's being applied
+        navbarCollapse.classList.remove('collapsing');
+        // Show the navbar once collapsing starts
+        navbarCollapse.classList.remove('d-none');
+      });
+      
+      // When the collapse is finished (fully open), add a class to hide it if necessary
+      navbarCollapse.addEventListener('hidden.bs.collapse', function () {
+        // When the collapse has finished, hide it again to avoid flickering
+        navbarCollapse.classList.add('d-none');
+      });
+      
+      // Handle the close button functionality
+      navbarCloseBtn.addEventListener('click', function () {
+        // Manually hide the navbar collapse if the close button is clicked
+        collapseInstance.hide();
+      });
+      </script>
+      
 
   </body>
 </html>
