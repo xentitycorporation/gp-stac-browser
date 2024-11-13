@@ -13,6 +13,28 @@
 
       gtag('config', 'G-1QVX78HYFS');
     </script>
+    <!-- Bootstrap JS, required for navbar toggling -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script>
+      // Function to close the navbar if the screen size is larger than the collapse breakpoint
+      function handleResize() {
+        const navbarCollapse = document.getElementById('navbarCollapse');
+        const navbarToggler = document.querySelector('.navbar-toggler');
+    
+        // Check if the screen size is larger than Bootstrap's lg breakpoint (992px)
+        if (window.innerWidth >= 992 && navbarCollapse.classList.contains('show')) {
+          // Hide the navbar and reset the toggler state
+          const collapse = new bootstrap.Collapse(navbarCollapse, {
+            toggle: false
+          });
+          collapse.hide();
+          navbarToggler.setAttribute('aria-expanded', 'false');
+        }
+      }
+    
+      // Add an event listener for window resize
+      window.addEventListener('resize', handleResize);
+    </script>
   
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
@@ -28,7 +50,6 @@
     <title>GeoPlatform STAC</title>
 
     <style>
-      /* Ensure the rendered container is mobile-friendly */
       #rendered {
         position: relative;
         flex-direction: column;
@@ -39,51 +60,93 @@
         width: 100%;
       }
 
-      /* Adjust the navbar and ensure spacing for mobile */
-      .navbar-brand img {
-        /* max-width: 150px; */
+      .navbar-brand {
         padding: 1px;
         margin-right: 3px;
-        margin-bottom: 3px;      }
+        margin-bottom: 15px;      }
 
       .navbar-nav {
-        text-align: center;
+        text-align: left;
       }
 
-      /* Adjust the hero section to ensure visibility and avoid overlapping */
       .hero-content-container {
-        text-align: center;
+        text-align: left;
         margin: 0 auto;
-        padding: 20px;
+        padding: 0px;
       }
 
-      /* Add spacing for mobile to prevent the GeoPlatform.gov logo from overlapping */
       .hero-container {
-        padding-top: 20px;
+        padding-top: 0px;
       }
 
-      /* Ensure that the header doesn't overlap */
       .hero-title {
-        margin-top: 20px; /* Extra spacing to prevent overlap with top */
+        margin-top: 20px;
+      }
+      /* Prevent flicker by hiding collapsing state */
+      .navbar-collapse.collapsing {
+        display: none !important;
       }
 
-      /* For mobile screens */
+      .navbar-collapse.show {
+        transition: right 0.3s ease-in-out;
+        #primary-nav{
+          background-color: white;
+          align-items: normal;
+          display: block;
+          font-weight: bold;
+          position: fixed;
+          top: 0;
+          right: 0;
+          height: 100%;
+          width: 30%;
+        }
+      }
+
+      .nav-item {
+        color: black !important;
+      }
+
+      .navbar-close-btn-wrapper {
+        padding: 10px;
+        justify-content: center; 
+        background-color: white;
+        position: sticky;
+        top: 0;
+        z-index: 1050;
+      }
+
+      .btn-close {
+        background-color: #00000057;
+        color: black; 
+        border: none; 
+        padding-top: .75rem;
+        padding-bottom: .75rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      @media (min-width: 992px) {
+        .navbar-close-btn-wrapper {
+          display: none !important;
+        }
+  }
+
       @media (max-width: 768px) {
         .navbar-nav {
           display: flex;
           flex-direction: column;
         }
 
-        .navbar-collapse {
-          width: 100%; 
-        }
-
         .hero-container {
-          padding-top: 100px; /* Extra padding for mobile to avoid overlap */
+          padding-top: 0px;
         }
 
         .hero-title {
-          margin-top: 50px; /* Add margin to push the header lower */
+          margin-top: 20px;
+        }
+
+        .hero-subtitle {
+        display: none;
         }
       }
     </style>
@@ -102,8 +165,13 @@
               <span class="navbar-toggler-icon"></span>
             </button>
           </div>
-          <div class="navbar-collapse collapse" id="navbarCollapse" style="height: 0px">
-              <ul id="primary-nav" class="navbar-nav ml-auto">
+          <div class="navbar-collapse collapse d-none" id="navbarCollapse" style="height: 0px">
+            <links>
+            <ul id="primary-nav" class="navbar-nav ml-auto">
+              <li class="navbar-close-btn-wrapper d-flex d-lg-none">
+                <button type="button" class="btn-close text-reset" aria-label="Close" id="navbarCloseBtn" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"></button>
+              </li>
+                
                 <li class="nav-item">
                   <a class="nav-link" href="https://sit.geoplatform.info/search">Search</a>
                 </li>
@@ -129,6 +197,7 @@
                   <a class="nav-link" href="https://sit-kb.geoplatform.info">Support</a>
                 </li>
               </ul>
+            </links>
           </div>
         </nav>
         <div class="hero-push"></div>
@@ -171,9 +240,37 @@
         </div>
       </footer>
     </div>
+    <script>
+      // Get references to the navbar-collapse and the close button
+      const navbarCollapse = document.getElementById('navbarCollapse');
+      const navbarCloseBtn = document.getElementById('navbarCloseBtn');
+      
+      // Bootstrap Collapse instance
+      const collapseInstance = new bootstrap.Collapse(navbarCollapse, {
+        toggle: false, // Don't toggle the collapse on initialization
+      });
+      
+      // When the collapse starts, hide the navbar to prevent flicker
+      navbarCollapse.addEventListener('show.bs.collapse', function () {
+        // Remove the collapsing class if it's being applied
+        navbarCollapse.classList.remove('collapsing');
+        // Show the navbar once collapsing starts
+        navbarCollapse.classList.remove('d-none');
+      });
+      
+      // When the collapse is finished (fully open), add a class to hide it if necessary
+      navbarCollapse.addEventListener('hidden.bs.collapse', function () {
+        // When the collapse has finished, hide it again to avoid flickering
+        navbarCollapse.classList.add('d-none');
+      });
+      
+      // Handle the close button functionality
+      navbarCloseBtn.addEventListener('click', function () {
+        // Manually hide the navbar collapse if the close button is clicked
+        collapseInstance.hide();
+      });
+      </script>
+      
 
-    <!-- Bootstrap JS, required for navbar toggling -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-u1Oha60nyrGyWWqxBiQzzLM5VSMEdZEPUs9rjv53A6AvYrF0GMCCPngRIoJ5jzUg" crossorigin="anonymous"></script>
   </body>
 </html>
