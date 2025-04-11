@@ -17,6 +17,11 @@
             "rel": "child",
             "href": "https://planetarycomputer.microsoft.com/api/stac/v1/",
             "title": "Microsoft Planetary Computer"
+        },
+        {
+            "rel": "child",
+            "href": "https://maxar-opendata.s3.amazonaws.com/events/catalog.json",
+            "title": "Maxar Analysis Ready Data"
         }
     ]
 }

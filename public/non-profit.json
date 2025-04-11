@@ -27,6 +27,16 @@
             "rel": "child",
             "href": "https://earth-search.aws.element84.com/v0/collections/sentinel-s2-l2a",
             "title": "Sentinel 2 L2A"
+        },
+        {
+            "rel": "child",
+            "href": "https://portal.opentopography.org/stac/catalog.json",
+            "title": "OpenTopography"
+        },
+        {
+            "rel": "child",
+            "href": "https://s3.eu-central-1.wasabisys.com/stac/openlandmap/catalog.json",
+            "title": "OpenLandMap STAC"
         }
     ]
 }
