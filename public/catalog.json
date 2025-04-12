@@ -42,6 +42,11 @@
             "rel": "child",
             "href": "./nonprofit.json",
             "title": "Nonprofit Collection"
+        },
+        {
+            "rel": "child",
+            "href": "./inland-waters.json",
+            "title": "Inland Waters Collection"
         },        
         {
             "rel": "child",
