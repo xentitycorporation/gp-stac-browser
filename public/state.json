@@ -1,42 +1,192 @@
 {
-    "id": "state-stac",
-    "stac_version": "1.0.0",
-    "title": " State",
-    "description": "This Collection is a virtual catalog of resources provided by State Institutions in the United States.",
-    "type": "Catalog",
-    "links": [
-        {
-            "rel": "self",
-            "href": "./state.json"
-        },
-        {
-            "rel": "root",
-            "href": "./state.json"
-        },
-        {
-            "rel": "child",
-            "href": "https://stac.asf.alaska.edu/",
-            "title": "Alaska STAC Catalog"
-        },
-        {
-            "rel": "child",
-            "href": "https://pgc-opendata-dems.s3.us-west-2.amazonaws.com/earthdem.json",
-            "title": "EarthDEM"
-        },
-        {
-            "rel": "child",
-            "href": "https://portal.opentopography.org/stac/catalog.json",
-            "title": "OpenTopography"
-        },
-         {
-            "rel": "child",
-            "href": "https://pgc-opendata-dems.s3.us-west-2.amazonaws.com/arcticdem.json",
-            "title": "ArcticDEM"
-        },
-        {
-            "rel": "child",
-            "href": "https://raw.githubusercontent.com/scottyhq/sentinel1-rtc-stac/main/collection.json",
-            "title": "Sentinel-1 Analysis Ready Backscatter Imagery"
-        }
-    ]
+  "id": "state-stac",
+  "stac_version": "1.0.0",
+  "title": " State",
+  "description": "This Collection is a virtual catalog of resources provided by State Institutions in the United States.",
+  "type": "Catalog",
+  "links": [
+    {
+      "rel": "self",
+      "href": "./state.json"
+    },
+    {
+      "rel": "root",
+      "href": "./state.json"
+    },
+    {
+      "rel": "child",
+      "href": "https://data-algeohub.opendata.arcgis.com/api/search/v1/collections/dataset",
+      "title": "Alabama"
+    },
+    {
+      "rel": "child",
+      "href": "https://gis.data.alaska.gov/api/search/v1/collections/dataset",
+      "title": "Alaska"
+    },
+    {
+      "rel": "child",
+      "href": "https://azgeo-data-hub-agic.hub.arcgis.com/api/search/v1/collections/dataset",
+      "title": "Arizona"
+    },
+    {
+      "rel": "child",
+      "href": "https://gis.data.ca.gov/api/search/v1/collections/dataset",
+      "title": "California"
+    },
+    {
+      "rel": "child",
+      "href": "https://ct-deep-gis-open-data-website-ctdeep.hub.arcgis.com/api/search/v1/collections/dataset",
+      "title": "Connecticut"
+    },
+    {
+      "rel": "child",
+      "href": "https://geodata.floridagio.gov/api/search/v1/collections/dataset",
+      "title": "Florida"
+    },
+    {
+      "rel": "child",
+      "href": "https://data-hub.gio.georgia.gov/api/search/v1/collections/dataset",
+      "title": "Georgia"
+    },
+    {
+      "rel": "child",
+      "href": "https://geoportal.hawaii.gov/api/search/v1/collections/dataset",
+      "title": "Hawaii"
+    },
+    {
+      "rel": "child",
+      "href": "https://gis-idaho.hub.arcgis.com/api/search/v1/collections/dataset",
+      "title": "Idaho"
+    },
+    {
+      "rel": "child",
+      "href": "https://www.indianamap.org/api/search/v1/collections/dataset",
+      "title": "Indiana"
+    },
+    {
+      "rel": "child",
+      "href": "https://data.imap.maryland.gov/api/search/v1/collections/dataset",
+      "title": "Maryland"
+    },
+    {
+      "rel": "child",
+      "href": "https://gis-michigan.opendata.arcgis.com/api/search/v1/collections/dataset",
+      "title": "Michigan"
+    },
+    {
+      "rel": "child",
+      "href": "https://opendata.gis.ms.gov/api/search/v1/collections/dataset",
+      "title": "Mississippi"
+    },
+    {
+      "rel": "child",
+      "href": "https://data-msdis.opendata.arcgis.com/api/search/v1/collections/dataset",
+      "title": "Missouri"
+    },
+    {
+      "rel": "child",
+      "href": "https://map-nebraska.hub.arcgis.com/api/search/v1/collections/dataset",
+      "title": "Nebraska"
+    },
+    {
+      "rel": "child",
+      "href": "https://www.nhgeodata.unh.edu/api/search/v1/collections/dataset",
+      "title": "New Hampshire"
+    },
+    {
+      "rel": "child",
+      "href": "https://data.nj.gov/api/search/v1/collections/dataset",
+      "title": "New Jersey"
+    },
+    {
+      "rel": "child",
+      "href": "https://data-nmenv.opendata.arcgis.com/api/search/v1/collections/dataset",
+      "title": "New Mexico"
+    },
+    {
+      "rel": "child",
+      "href": "https://data.gis.ny.gov/api/search/v1/collections/dataset",
+      "title": "New York"
+    },
+    {
+      "rel": "child",
+      "href": "https://www.nconemap.gov/api/search/v1/collections/dataset",
+      "title": "North Carolina"
+    },
+    {
+      "rel": "child",
+      "href": "https://gishubdata-ndgov.hub.arcgis.com/api/search/v1/collections/dataset",
+      "title": "North Dakota"
+    },
+    {
+      "rel": "child",
+      "href": "https://ogrip-geohio.opendata.arcgis.com/api/search/v1/collections/dataset",
+      "title": "Ohio"
+    },
+    {
+      "rel": "child",
+      "href": "https://csagis-uok.opendata.arcgis.com/api/search/v1/collections/dataset",
+      "title": "Oklahoma"
+    },
+    {
+      "rel": "child",
+      "href": "https://geohub.oregon.gov/api/search/v1/collections/dataset",
+      "title": "Oregon"
+    },
+    {
+      "rel": "child",
+      "href": "https://data.pa.gov/api/search/v1/collections/dataset",
+      "title": "Pennsylvania"
+    },
+    {
+      "rel": "child",
+      "href": "https://www.rigis.org/api/search/v1/collections/dataset",
+      "title": "Rhode Island"
+    },
+    {
+      "rel": "child",
+      "href": "https://data-scdnr.opendata.arcgis.com/api/search/v1/collections/dataset",
+      "title": "South Carolina"
+    },
+    {
+      "rel": "child",
+      "href": "https://opendata2017-09-18t192802468z-sdbit.opendata.arcgis.com/api/search/v1/collections/dataset",
+      "title": "South Dakota"
+    },
+    {
+      "rel": "child",
+      "href": "https://tn-tnmap.opendata.arcgis.com/api/search/v1/collections/dataset",
+      "title": "Tennessee"
+    },
+    {
+      "rel": "child",
+      "href": "https://data.texas.gov/api/search/v1/collections/dataset",
+      "title": "Texas"
+    },
+    {
+      "rel": "child",
+      "href": "https://geodata.vermont.gov/api/search/v1/collections/dataset",
+      "title": "Vermont"
+    },
+    {
+      "rel": "child",
+      "href": "https://geo.wa.gov/api/search/v1/collections/dataset",
+      "title": "Washington"
+    },
+    {
+      "rel": "child",
+      "href": "http://wvgis.wvu.edu/data/data.php/api/search/v1/collections/dataset",
+      "title": "West Virginia"
+    },
+    {
+      "rel": "child",
+      "href": "https://data-wi-dnr.opendata.arcgis.com/api/search/v1/collections/dataset",
+      "title": "Wisconsin"
+    },
+    {
+      "rel": "child",
+      "href": "https://data.geospatialhub.org/api/search/v1/collections/dataset",
+      "title": "Wyoming"
+    }
+  ]
 }
