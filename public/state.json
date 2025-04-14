@@ -95,7 +95,7 @@
     },
     {
       "rel": "child",
-      "href": "https://data.nj.gov/api/search/v1/collections/dataset",
+      "href": "https://data-algeohub.opendata.arcgis.com/api/search/v1/collections/dataset",
       "title": "New Jersey"
     },
     {
@@ -120,7 +120,7 @@
     },
     {
       "rel": "child",
-      "href": "https://ogrip-geohio.opendata.arcgis.com/api/search/v1/collections/dataset",
+      "href": "https://data-algeohub.opendata.arcgis.com/api/search/v1/collections/dataset",
       "title": "Ohio"
     },
     {
@@ -135,7 +135,7 @@
     },
     {
       "rel": "child",
-      "href": "https://data.pa.gov/api/search/v1/collections/dataset",
+      "href": "https://data-algeohub.opendata.arcgis.com/api/search/v1/collections/dataset",
       "title": "Pennsylvania"
     },
     {
