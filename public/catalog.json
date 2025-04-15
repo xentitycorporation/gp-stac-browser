@@ -25,6 +25,11 @@
         },
         {
             "rel": "child",
+            "href": "./disasters.json",
+            "title": "Disasters Collection"
+        },
+        {
+            "rel": "child",
             "href": "./global-catalog.json",
             "title": "Global Collection"
         },
