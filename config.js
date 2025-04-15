@@ -69,6 +69,8 @@ module.exports = {
             stac.description = 'LandsatLook is a tool that allows rapid online viewing and access to the USGS Landsat Collection 2 data. LandsatLook leverages resources available via a commercial cloud environment including Cloud Optimized GeoTIFF (COG) and Spatio Temporal Asset Catalog (STAC) metadata.';
         } else if (stac.getBrowserPath() === '/external/data-algeohub.opendata.arcgis.com/api/search/v1/collections/dataset') {
             stac.title = 'Alabama'
+        } else if (stac.getBrowserPath() === '/external/gis.data.alaska.gov/api/search/v1/collections/dataset') {
+            stac.title = "Alaska"
         }  else if (stac.getBrowserPath() === '/external/azgeo-data-hub-agic.hub.arcgis.com/api/search/v1/collections/dataset') {
             stac.title = 'Arizona'
         }  else if (stac.getBrowserPath() === '/external/gis.data.ca.gov/api/search/v1/collections/dataset') {
@@ -125,12 +127,6 @@ module.exports = {
             stac.title = 'Wisconsin'
         }  else if (stac.getBrowserPath() === '/external/data.geospatialhub.org/api/search/v1/collections/dataset') {
             stac.title = 'Wyoming'
-        }  else if (stac.getBrowserPath() === '/external/data-algeohub.opendata.arcgis.com/api/search/v1/collections/dataset') {
-            stac.title = 'Alabama'
-        }  else if (stac.getBrowserPath() === '/external/data-algeohub.opendata.arcgis.com/api/search/v1/collections/dataset') {
-            stac.title = 'Alabama'
-        }  else if (stac.getBrowserPath() === '/external/data-algeohub.opendata.arcgis.com/api/search/v1/collections/dataset') {
-            stac.title = 'Alabama'
         }
         return stac;
     }

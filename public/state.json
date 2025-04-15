@@ -95,11 +95,6 @@
     },
     {
       "rel": "child",
-      "href": "https://data-algeohub.opendata.arcgis.com/api/search/v1/collections/dataset",
-      "title": "New Jersey"
-    },
-    {
-      "rel": "child",
       "href": "https://data-nmenv.opendata.arcgis.com/api/search/v1/collections/dataset",
       "title": "New Mexico"
     },
@@ -120,11 +115,6 @@
     },
     {
       "rel": "child",
-      "href": "https://data-algeohub.opendata.arcgis.com/api/search/v1/collections/dataset",
-      "title": "Ohio"
-    },
-    {
-      "rel": "child",
       "href": "https://csagis-uok.opendata.arcgis.com/api/search/v1/collections/dataset",
       "title": "Oklahoma"
     },
@@ -132,11 +122,6 @@
       "rel": "child",
       "href": "https://geohub.oregon.gov/api/search/v1/collections/dataset",
       "title": "Oregon"
-    },
-    {
-      "rel": "child",
-      "href": "https://data-algeohub.opendata.arcgis.com/api/search/v1/collections/dataset",
-      "title": "Pennsylvania"
     },
     {
       "rel": "child",
