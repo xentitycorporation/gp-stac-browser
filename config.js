@@ -67,6 +67,8 @@ module.exports = {
         } else if (stac.getBrowserPath() === '/external/landsatlook.usgs.gov/stac-server/') {
             stac.title = 'USGS Landsat Collection 2 data'
             stac.description = 'LandsatLook is a tool that allows rapid online viewing and access to the USGS Landsat Collection 2 data. LandsatLook leverages resources available via a commercial cloud environment including Cloud Optimized GeoTIFF (COG) and Spatio Temporal Asset Catalog (STAC) metadata.';
+        } else if (stac.getBrowserPath() === '/external/hub.arcgis.com/api/search/v1/collections/all') {
+            stac.title = 'Esri ArcGIS Hub'
         } else if (stac.getBrowserPath() === '/external/data-algeohub.opendata.arcgis.com/api/search/v1/collections/dataset') {
             stac.title = 'Alabama'
         } else if (stac.getBrowserPath() === '/external/gis.data.alaska.gov/api/search/v1/collections/dataset') {
