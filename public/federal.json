@@ -127,6 +127,11 @@
             "rel": "child",
             "href": "https://geoconops-geoplatform.hub.arcgis.com/api/search/v1/collections/dataset",
             "title": "Geospatial Concept of Operations"
+        },
+        {
+            "rel": "child",
+            "href": "https:/stac.astrogeology.usgs.gov",
+            "title": "USGS Astrogeology STAC API"
         }
     ]
 }
