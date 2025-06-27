@@ -1,8 +1,7 @@
 .DS_Store
 .cache/
-node_modules
+/node_modules
 /dist
-
 
 # local env files
 .env
@@ -26,3 +25,8 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Generated files (do not commit)
+/public/index.html
+/config.js
+/src/theme/page.scss
