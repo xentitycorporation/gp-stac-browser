@@ -130,7 +130,7 @@
         },
         {
             "rel": "child",
-            "href": "https:/stac.astrogeology.usgs.gov",
+            "href": "https://stac.astrogeology.usgs.gov",
             "title": "USGS Astrogeology STAC API"
         }
     ]
