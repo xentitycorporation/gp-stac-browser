@@ -1,0 +1,72 @@
+{
+    "id": "geoplatform-stac",
+    "stac_version": "1.0.0",
+    "title": "GeoPlatform STAC Catalog",
+    "description": "GeoPlatform.gov provides official list of National STAC Sources.",
+    "type": "Catalog",
+    "links": [
+        {
+            "rel": "self",
+            "href": "./catalog.json"
+        },
+        {
+            "rel": "root",
+            "href": "./catalog.json"
+        },
+        {
+            "rel": "child",
+            "href": "./academia.json",
+            "title": "Academia Collection"
+        },
+        {
+            "rel": "child",
+            "href": "./federal.json",
+            "title": "Federal Collection"
+        },
+        {
+            "rel": "child",
+            "href": "./disasters.json",
+            "title": "Disasters Collection"
+        },
+        {
+            "rel": "child",
+            "href": "./global-catalog.json",
+            "title": "Global Collection"
+        },
+        {
+            "rel": "child",
+            "href": "./state.json",
+            "title": "State Collection"
+        },
+        {
+            "rel": "child",
+            "href": "./industry.json",
+            "title": "Industry Collection"
+        },
+        {
+            "rel": "child",
+            "href": "./nonprofit.json",
+            "title": "Nonprofit Collection"
+        },
+        {
+            "rel": "child",
+            "href": "./inland-waters.json",
+            "title": "Inland Waters Collection"
+        },        
+        {
+            "rel": "child",
+            "href": "./tribal.json",
+            "title": "Tribal Collection"
+        },
+        {
+            "rel": "child",
+            "href": "./wildfires.json",
+            "title": "Wildfires Collection"
+        },
+        {
+            "rel": "child",
+            "href": "./ngda.json",
+            "title": "NGDA Collection"
+        }
+    ]
+}

@@ -1,0 +1,112 @@
+{
+  "id": "ngda-stac",
+  "stac_version": "1.0.0",
+  "title": "NGDA",
+  "description": "This Collection is a virtual catalog of National Geospatial Data Assets (NGDA) provided by United States federal agencies.",
+  "type": "Catalog",
+  "links": [
+    {
+      "rel": "self",
+      "href": "./ngda.json"
+    },
+    {
+      "rel": "root",
+      "href": "./catalog.json"
+    },
+    {
+      "rel": "child",
+      "href": "https://ngda-address-geoplatform.hub.arcgis.com/api/search/v1/collections/dataset",
+      "title": "Address"
+    },
+    {
+      "rel": "child",
+      "href": "https://ngda-biodiversity-geoplatform.hub.arcgis.com/api/search/v1/collections/dataset",
+      "title": "Biodiversity and Ecosystems"
+    },
+    {
+      "rel": "child",
+      "href": "https://ngda-cadastre-geoplatform.hub.arcgis.com/api/search/v1/collections/dataset",
+      "title": "Cadastre"
+    },
+    {
+      "rel": "child",
+      "href": "https://ngda-climate-and-weather-geoplatform.hub.arcgis.com/api/search/v1/collections/dataset",
+      "title": "Climate and Weather"
+    },
+    {
+      "rel": "child",
+      "href": "https://ngda-cultural-resources-geoplatform.hub.arcgis.com/api/search/v1/collections/dataset",
+      "title": "Cultural Resources"
+    },
+    {
+      "rel": "child",
+      "href": "https://ngda-elevation-geoplatform.hub.arcgis.com/api/search/v1/collections/dataset",
+      "title": "Elevation"
+    },
+    {
+      "rel": "child",
+      "href": "https://ngda-geodetic-control-geoplatform.hub.arcgis.com/api/search/v1/collections/dataset",
+      "title": "Geodetic Control"
+    },
+    {
+      "rel": "child",
+      "href": "https://ngda-geology-geoplatform.hub.arcgis.com/api/search/v1/collections/dataset",
+      "title": "Geology"
+    },
+    {
+      "rel": "child",
+      "href": "https://ngda-gov-units-geoplatform.hub.arcgis.com/api/search/v1/collections/dataset",
+      "title": "Governmental Units, and Administrative and Statistical Boundaries"
+    },
+    {
+      "rel": "child",
+      "href": "https://ngda-imagery-theme-geoplatform.hub.arcgis.com/api/search/v1/collections/dataset",
+      "title": "Imagery"
+    },
+    {
+      "rel": "child",
+      "href": "https://ngda-international-boundaries-geoplatform.hub.arcgis.com/api/search/v1/collections/dataset",
+      "title": "International Boundaries"
+    },
+    {
+      "rel": "child",
+      "href": "https://ngda-land-use-land-cover-geoplatform.hub.arcgis.com/api/search/v1/collections/dataset",
+      "title": "Land Use - Land Cover"
+    },
+    {
+      "rel": "child",
+      "href": "https://ngda-portfolio-community-geoplatform.hub.arcgis.com/api/search/v1/collections/dataset",
+      "title": "NGDA Portfolio"
+    },
+    {
+      "rel": "child",
+      "href": "https://ngda-real-property-geoplatform.hub.arcgis.com/api/search/v1/collections/dataset",
+      "title": "Real Property"
+    },
+    {
+      "rel": "child",
+      "href": "https://ngda-soils-geoplatform.hub.arcgis.com/api/search/v1/collections/dataset",
+      "title": "Soils"
+    },
+    {
+      "rel": "child",
+      "href": "https://ngda-transportation-geoplatform.hub.arcgis.com/api/search/v1/collections/dataset",
+      "title": "Transportation"
+    },
+    {
+      "rel": "child",
+      "href": "https://ngda-utilities-geoplatform.hub.arcgis.com/api/search/v1/collections/dataset",
+      "title": "Utilities"
+    },
+    {
+      "rel": "child",
+      "href": "https://ngda-water-inland-geoplatform.hub.arcgis.com/api/search/v1/collections/dataset",
+      "title": "Water - Inland"
+    },
+    {
+      "rel": "child",
+      "href": "https://ngda-water-oceans-and-coasts-geoplatform.hub.arcgis.com/api/search/v1/collections/dataset",
+      "title": "Water - Oceans and Coasts"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+    "id": "disasters-stac",
+    "stac_version": "1.0.0",
+    "title": "Disasters",
+    "description": "This Collection is a virtual catalog of community preparedness and resiliency resources provided by United States federal agencies.",
+    "type": "Catalog",
+    "links": [
+        {
+            "rel": "self",
+            "href": "./disasters.json"
+        },
+        {
+            "rel": "root",
+            "href": "./catalog.json"
+        },
+        {
+            "rel": "child",
+            "href": "https://hifld-geoplatform.hub.arcgis.com/api/search/v1/collections/dataset",
+            "title": "Homeland Infrastructure Foundation-Level Data"
+        }
+    ]
+}

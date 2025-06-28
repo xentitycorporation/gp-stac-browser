@@ -1,3 +1,44 @@
+# GeoPlatform Deploy
+
+**Use the master branch for deployment to GeoPlatform**
+
+Deployment to different GeoPlatform environments (SIT, STG, PRD) is managed through a series of npm scripts that automate the build and deployment process.
+
+### Build Process
+
+The build process uses a shell script (`build-environment.sh`) to generate environment-specific configuration files from templates. This ensures that the correct API endpoints and asset paths are used for each environment.
+
+-   **Template Files**: The source code contains template files with placeholders (e.g., `#PUBLIC_URL#`).
+    -   `./config.js.template`
+    -   `./src/theme/page.scss.template`
+    -   `./src/index_template.html` (generates `public/index.html`)
+-   **Generated Files**: The build script creates the actual configuration files from these templates. These generated files are listed in `.gitignore` and **should not be committed to the repository**.
+    -   `./config.js`
+    -   `./src/theme/page.scss`
+    -   `./public/index.html`
+
+### Deployment Steps
+
+To build and deploy the application for a specific environment, run the corresponding scripts in order.
+
+1.  **Build (per environment):**
+    *   SIT: `npm run build:sit`
+    *   SIT (Terraform): `npm run build:sit-tf`
+    *   STG: `npm run build:stg`
+    *   PRD: `npm run build:prd`
+
+2.  **Deploy to S3 (per environment):**
+    *   SIT: `npm run deploy:sit`
+    *   SIT (Terraform): `npm run deploy:sit-tf`
+    *   STG: `npm run deploy:stg`
+    *   PRD: `npm run deploy:prd`
+
+3.  **Invalidate CloudFront Cache (per environment):**
+    *   SIT: `npm run deploy:sit:cf`
+    *   SIT (Terraform): `npm run deploy:sit-tf:cf`
+    *   STG: `npm run deploy:stg:cf`
+    *   PRD: `npm run deploy:prd:cf`
+
 # STAC Browser
 
 This is a [Spatio-Temporal Asset Catalog (STAC)](https://github.com/radiantearth/stac-spec) browser for static catalogs.

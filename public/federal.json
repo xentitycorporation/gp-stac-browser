@@ -1,0 +1,122 @@
+{
+    "id": "federal-stac",
+    "stac_version": "1.0.0",
+    "title": "Federal",
+    "description": "This Collection is a virtual catalog of resources provided by United States federal agencies.",
+    "type": "Catalog",
+    "links": [
+        {
+            "rel": "self",
+            "href": "./federal.json"
+        },
+        {
+            "rel": "root",
+            "href": "./catalog.json"
+        },
+        {
+            "rel": "child",
+            "href": "https://pgc-opendata-dems.s3.us-west-2.amazonaws.com/arcticdem.json",
+            "title": "ArcticDEM"
+        },
+        {
+            "rel": "child",
+            "href": "https://fedeo.ceos.org",
+            "title": "FedEO Clearinghouse"
+        },
+        {
+            "rel": "child",
+            "href": "https://meeo-s3.s3.amazonaws.com/catalog.json",
+            "title": "Sentinel3 Level2 and Level3"
+        },
+        {
+            "rel": "child",
+            "href": "https://landsat-stac.s3.amazonaws.com/catalog.json",
+            "title": "Landsat STAC Data"
+        },
+        {
+            "rel": "child",
+            "href": "https://cmr.earthdata.nasa.gov/cloudstac",
+            "title": "NASA CMR Cloud"
+        },
+        {
+            "rel": "child",
+            "href": "https://meeo-s5p.s3.amazonaws.com/catalog.json",
+            "title": "Sentinel 5P Level 2 and Level 3"
+        },
+        {
+            "rel": "child",
+            "href": "https://sentinel-stac.s3.amazonaws.com/catalog.json",
+            "title": "Sentinel STAC Data"
+        },
+        {
+            "rel": "child",
+            "href": "https://usgs-lidar-stac.s3-us-west-2.amazonaws.com/ept/catalog.json",
+            "title": "USGS 3DEP LiDAR Point Clouds"
+        },
+        {
+            "rel": "child",
+            "href": "https://asc-stacbrowser.s3.us-west-2.amazonaws.com/catalog.json",
+            "title": "USGS Astrogeology Provided Analysis Ready Data"
+        },
+        {
+            "rel": "child",
+            "href": "https://stac.maap-project.org",
+            "title": "MAAP STAC API (dev)"
+        },
+        {
+            "rel": "child",
+            "href": "https://pgc-opendata-dems.s3.us-west-2.amazonaws.com/earthdem.json",
+            "title": "EarthDEM"
+        },
+        {
+            "rel": "child",
+            "href": "https://nasa-iserv.s3-us-west-2.amazonaws.com/catalog/catalog.json",
+            "title": "ISS SERVIR Environmental Research and Visualization System"
+        },
+        {
+            "rel": "child",
+            "href": "https://cmr.earthdata.nasa.gov/stac",
+            "title": "NASA CMR"
+        },
+        {
+            "rel": "child",
+            "href": "https://landsatlook.usgs.gov/stac-server/",
+            "title": "USGS Landsat"
+        },
+        {
+            "rel": "child",
+            "href": "https://noaa-nos-coastal-lidar-pds.s3.amazonaws.com/entwine/stac/catalog.json",
+            "title": "Lidar Datasets at NOAA Digital Coast"
+        },
+        {
+            "rel": "child",
+            "href": "https://geodata.bts.gov/api/search/v1/collections/dataset",
+            "title": "National Transportation Atlas Database"
+        },
+        {
+            "rel": "child",
+            "href": "https://disasters-geoplatform.hub.arcgis.com/api/search/v1/collections/dataset",
+            "title": "GeoPlatform.gov Disasters"
+        },
+        {
+            "rel": "child",
+            "href": "https://resilience-geoplatform.hub.arcgis.com/api/search/v1/collections/dataset",
+            "title": "GeoPlatform.gov Resilience"
+        },
+        {
+            "rel": "child",
+            "href": "https://hifld-geoplatform.hub.arcgis.com/api/search/v1/collections/dataset",
+            "title": "Homeland Infrastructure Foundation-Level Data"
+        },
+        {
+            "rel": "child",
+            "href": "https://geoconops-geoplatform.hub.arcgis.com/api/search/v1/collections/dataset",
+            "title": "Geospatial Concept of Operations"
+        },
+        {
+            "rel": "child",
+            "href": "https://stac.astrogeology.usgs.gov/api",
+            "title": "USGS Astrogeology STAC API"
+        }
+    ]
+}

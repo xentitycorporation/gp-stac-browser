@@ -25,6 +25,9 @@
           <b-button variant="outline-primary" size="sm" :title="$t('browse')" v-b-toggle.sidebar @click="$emit('enableSidebar')">
             <b-icon-book /> <span class="button-label prio">{{ $t('browse') }}</span>
           </b-button>
+          <b-button variant="outline-primary" size="sm" title="Home" to="/">
+            <b-icon-house /> <span class="button-label prio">Home</span>
+          </b-button>
           <b-button v-if="canSearch" variant="outline-primary" size="sm" :to="searchBrowserLink" :title="$t('search.title')" :pressed="isSearchPage()">
             <b-icon-search /> <span class="button-label prio">{{ $t('search.title') }}</span>
           </b-button>
@@ -41,7 +44,7 @@
 import { mapState, mapGetters, mapMutations, mapActions } from 'vuex';
 import Source from './Source.vue';
 import StacLink from './StacLink.vue';
-import { BIconArrow90degUp, BIconArrowLeft, BIconBook, BIconFolderSymlink, BIconSearch, BIconLock, BIconUnlock } from "bootstrap-vue";
+import { BIconArrow90degUp, BIconArrowLeft, BIconBook, BIconFolderSymlink, BIconHouse, BIconSearch, BIconLock, BIconUnlock } from "bootstrap-vue";
 import STAC from '../models/stac';
 import Utils from '../utils';
 
@@ -52,6 +55,7 @@ export default {
     BIconArrowLeft,
     BIconBook,
     BIconFolderSymlink,
+    BIconHouse,
     BIconSearch,
     BIconLock,
     BIconUnlock,

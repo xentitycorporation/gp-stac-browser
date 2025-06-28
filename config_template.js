@@ -1,5 +1,5 @@
 module.exports = {
-    catalogUrl: null,
+    catalogUrl: 'https://#STG_ENV#-stac.geoplatform.info/catalog.json',
     catalogTitle: "STAC Browser",
     allowExternalAccess: true, // Must be true if catalogUrl is not given
     allowedDomains: [],
@@ -35,9 +35,8 @@ module.exports = {
     historyMode: "history",
     cardViewMode: "cards",
     cardViewSort: "asc",
-    showKeywordsInItemCards: false,
-    showKeywordsInCatalogCards: false,
     showThumbnailsAsAssets: false,
+    stacLint: true,
     geoTiffResolution: 128,
     redirectLegacyUrls: false,
     itemsPerPage: 12,

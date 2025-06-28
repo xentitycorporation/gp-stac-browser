@@ -1,0 +1,95 @@
+module.exports = {
+    catalogUrl: '#CATALOG_URL#/catalog.json',
+    catalogTitle: "GeoPlatform STAC",
+    allowExternalAccess: true, // Must be true if catalogUrl is not given
+    allowedDomains: [],
+    whitelistedExternalCatalogs: [],
+    detectLocaleFromBrowser: true,
+    storeLocale: true,
+    locale: "en",
+    fallbackLocale: "en",
+    supportedLocales: [
+        "de",
+//      "de-CH",
+        "es",
+        "en",
+        "fr",
+//      "fr-CA",
+//      "fr-CH",
+        "it",
+//      "it-CH",
+        "ro"
+    ],
+    apiCatalogPriority: null,
+    useTileLayerAsFallback: true,
+    displayGeoTiffByDefault: false,
+    buildTileUrlTemplate: ({href, asset}) => "https://tiles.rdnt.io/tiles/{z}/{x}/{y}@2x?url=" + encodeURIComponent(asset.href.startsWith("/vsi") ? asset.href : href),
+    stacProxyUrl: null,
+    cardViewMode: "cards",
+    cardViewSort: "asc",
+    showThumbnailsAsAssets: false,
+    showKeywordsInItemCards: true,
+    showKeywordsInCatalogCards: true,
+    stacLint: true,
+    geoTiffResolution: 128,
+    redirectLegacyUrls: false,
+    itemsPerPage: 12,
+    defaultThumbnailSize: null,
+    maxPreviewsOnMap: 50,
+    crossOriginMedia: null,
+    requestHeaders: {},
+    requestQueryParameters: {},
+    authConfig: null,
+    preprocessSTAC: (() => {
+        const stacMetadata = {
+            '/external/stac.asf.alaska.edu/': {
+                title: 'Alaska Satellite Facility',
+                description: 'The Alaska Satellite Facility is part of the Geophysical Institute of the University of Alaska Fairbanks, located on the Troth Yeddha’ campus.'
+            },
+            '/external/landsatlook.usgs.gov/stac-server/': {
+                title: 'USGS Landsat Collection 2 data',
+                description: 'LandsatLook is a tool that allows rapid online viewing and access to the USGS Landsat Collection 2 data. LandsatLook leverages resources available via a commercial cloud environment including Cloud Optimized GeoTIFF (COG) and Spatio Temporal Asset Catalog (STAC) metadata.'
+            },
+            '/external/hub.arcgis.com/api/search/v1/collections/all': { title: 'Esri ArcGIS Hub' },
+            '/external/data-algeohub.opendata.arcgis.com/api/search/v1/collections/dataset': { title: 'Alabama' },
+            '/external/gis.data.alaska.gov/api/search/v1/collections/dataset': { title: 'Alaska' },
+            '/external/azgeo-data-hub-agic.hub.arcgis.com/api/search/v1/collections/dataset': { title: 'Arizona' },
+            '/external/gis.data.ca.gov/api/search/v1/collections/dataset': { title: 'California' },
+            '/external/ct-deep-gis-open-data-website-ctdeep.hub.arcgis.com/api/search/v1/collections/dataset': { title: 'Connecticut' },
+            '/external/geodata.floridagio.gov/api/search/v1/collections/dataset': { title: 'Florida' },
+            '/external/data-hub.gio.georgia.gov/api/search/v1/collections/dataset': { title: 'Georgia' },
+            '/external/geoportal.hawaii.gov/api/search/v1/collections/dataset': { title: 'Hawaii' },
+            '/external/gis-idaho.hub.arcgis.com/api/search/v1/collections/dataset': { title: 'Idaho' },
+            '/external/www.indianamap.org/api/search/v1/collections/dataset': { title: 'Indiana' },
+            '/external/data.imap.maryland.gov/api/search/v1/collections/dataset': { title: 'Maryland' },
+            '/external/gis-michigan.opendata.arcgis.com/api/search/v1/collections/dataset': { title: 'Michigan' },
+            '/external/opendata.gis.ms.gov/api/search/v1/collections/dataset': { title: 'Mississippi' },
+            '/external/data-msdis.opendata.arcgis.com/api/search/v1/collections/dataset': { title: 'Missouri' },
+            '/external/map-nebraska.hub.arcgis.com/api/search/v1/collections/dataset': { title: 'Nebraska' },
+            '/external/www.nhgeodata.unh.edu/api/search/v1/collections/dataset': { title: 'New Hampshire' },
+            '/external/data-nmenv.opendata.arcgis.com/api/search/v1/collections/dataset': { title: 'New Mexico' },
+            '/external/data.gis.ny.gov/api/search/v1/collections/dataset': { title: 'New York' },
+            '/external/www.nconemap.gov/api/search/v1/collections/dataset': { title: 'North Carolina' },
+            '/external/gishubdata-ndgov.hub.arcgis.com/api/search/v1/collections/dataset': { title: 'North Dakota' },
+            '/external/csagis-uok.opendata.arcgis.com/api/search/v1/collections/dataset': { title: 'Oklahoma' },
+            '/external/geohub.oregon.gov/api/search/v1/collections/dataset': { title: 'Oregon' },
+            '/external/www.rigis.org/api/search/v1/collections/dataset': { title: 'Rhode Island' },
+            '/external/data-scdnr.opendata.arcgis.com/api/search/v1/collections/dataset': { title: 'South Carolina' },
+            '/external/opendata2017-09-18t192802468z-sdbit.opendata.arcgis.com/api/search/v1/collections/dataset': { title: 'South Dakota' },
+            '/external/tn-tnmap.opendata.arcgis.com/api/search/v1/collections/dataset': { title: 'Tennessee' },
+            '/external/geodata.vermont.gov/api/search/v1/collections/dataset': { title: 'Vermont' },
+            '/external/geo.wa.gov/api/search/v1/collections/dataset': { title: 'Washington' },
+            '/external/data-wi-dnr.opendata.arcgis.com/api/search/v1/collections/dataset': { title: 'Wisconsin' },
+            '/external/data.geospatialhub.org/api/search/v1/collections/dataset': { title: 'Wyoming' }
+        };
+
+        return (stac, state) => {
+            const path = stac.getBrowserPath();
+            const metadata = stacMetadata[path];
+            if (metadata) {
+                Object.assign(stac, metadata);
+            }
+            return stac;
+        };
+    })()
+};
