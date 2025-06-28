@@ -25,8 +25,8 @@
           <b-button variant="outline-primary" size="sm" :title="$t('browse')" v-b-toggle.sidebar @click="$emit('enableSidebar')">
             <b-icon-book /> <span class="button-label prio">{{ $t('browse') }}</span>
           </b-button>
-          <b-button variant="outline-primary" size="sm" :title="$t('home')" v-b-toggle.sidebar @click="goHome">
-            <b-icon-house /> <span class="button-label prio">{{ $t('Home') }}</span>
+          <b-button variant="outline-primary" size="sm" title="Home" to="/">
+            <b-icon-house /> <span class="button-label prio">Home</span>
           </b-button>
           <b-button v-if="canSearch" variant="outline-primary" size="sm" :to="searchBrowserLink" :title="$t('search.title')" :pressed="isSearchPage()">
             <b-icon-search /> <span class="button-label prio">{{ $t('search.title') }}</span>
