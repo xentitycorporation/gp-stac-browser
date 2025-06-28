@@ -1,0 +1,17 @@
+{
+    "id": "inland-waters-stac",
+    "stac_version": "1.0.0",
+    "title": "Inland Waters",
+    "description": "This Collection is a virtual catalog of Inland Water resources provided by United States federal agencies.",
+    "type": "Catalog",
+    "links": [
+        {
+            "rel": "self",
+            "href": "./inland-waters.json"
+        },
+        {
+            "rel": "root",
+            "href": "./catalog.json"
+        }
+    ]
+}

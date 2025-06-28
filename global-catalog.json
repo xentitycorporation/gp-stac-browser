@@ -1,0 +1,62 @@
+{
+    "id": "global-stac",
+    "stac_version": "1.0.0",
+    "title": "Global",
+    "description": "This Collection is a virtual catalog of global resources provided.",
+    "type": "Catalog",
+    "links": [
+        {
+            "rel": "self",
+            "href": "./global-catalog.json"
+        },
+        {
+            "rel": "root",
+            "href": "./catalog.json"
+        },
+        {
+            "rel": "child",
+            "href": "https://data.inpe.br/bdc/stac/v1/",
+            "title": "INPE STAC Server"
+        },
+        {
+            "rel": "child",
+            "href": "https://s3.eu-central-1.wasabisys.com/stac/odse/catalog.json",
+            "title": "Open Environmental Data Cube Europe"
+        },
+        {
+            "rel": "child",
+            "href": "https://meeo-s5p.s3.amazonaws.com/catalog.json",
+            "title": "Sentinel 5P Level 2 and Level 3"
+        },
+        {
+            "rel": "child",
+            "href": "https://raw.githubusercontent.com/scottyhq/sentinel1-rtc-stac/main/collection.json",
+            "title": "Sentinel-1 Analysis Ready Backscatter Imagery"
+        },
+        {
+            "rel": "child",
+            "href": "https://earth-search.aws.element84.com/v0/collections/sentinel-s2-l2a",
+            "title": "Sentinel 2 L2A"
+        },
+        {
+            "rel": "child",
+            "href": "https://meeo-s3.s3.amazonaws.com/catalog.json",
+            "title": "Sentinel3 Level2 and Level3"
+        },
+        {
+            "rel": "child",
+            "href": "https://sentinel-stac.s3.amazonaws.com/catalog.json",
+            "title": "Sentinel STAC Data"
+        },
+        {
+            "rel": "child",
+            "href": "https://fedeo.ceos.org",
+            "title": "FedEO Clearinghouse"
+        },
+	{
+            "rel": "child",
+            "href": "https://stac.maap-project.org/",
+            "title": "MAAP STAC API (dev)"
+        }
+    ]
+}
